@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - AI-Enhanced System Call Optimization{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card bg-dark">
+            <div class="card-body text-center py-5">
+                <h1 class="display-4 mb-4">AI-Enhanced System Call Optimization</h1>
+                <p class="lead mb-4">Reducing system call latency through intelligent prediction and optimization</p>
+                <a href="/data-analysis" class="btn btn-primary btn-lg">Get Started</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-lg-12">
+        <div class="card bg-dark">
+            <div class="card-header">
+                <h2>About the Project</h2>
+            </div>
+            <div class="card-body">
+                <h3>What are System Calls?</h3>
+                <p>
+                    System calls are the fundamental interface between an application and the Linux kernel.
+                    They allow user-space applications to request services from the operating system kernel, such as:
+                </p>
+                <ul>
+                    <li>File operations (open, read, write, close)</li>
+                    <li>Process control (fork, exec, exit)</li>
+                    <li>Device manipulation</li>
+                    <li>Information maintenance</li>
+                    <li>Communication (pipe, socket)</li>
+                </ul>
+                
+                <h3 class="mt-4">The Challenge</h3>
+                <p>
+                    System calls can become a performance bottleneck due to:
+                </p>
+                <ul>
+                    <li>Context switching overhead between user space and kernel space</li>
+                    <li>System call latency, especially for I/O operations</li>
+                    <li>Inefficient system call patterns leading to redundant operations</li>
+                    <li>Blocking operations that stall application execution</li>
+                </ul>
+                
+                <h3 class="mt-4">Our Solution</h3>
+                <p>
+                    This project demonstrates how AI can be leveraged to optimize system calls by:
+                </p>
+                <ul>
+                    <li>Analyzing patterns in system call usage</li>
+                    <li>Predicting future system call needs</li>
+                    <li>Optimizing call sequences to reduce latency</li>
+                    <li>Batching similar calls to minimize context switching</li>
+                    <li>Recommending asynchronous alternatives when appropriate</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-lg-12">
+        <h2 class="mb-4">How It Works</h2>
+    </div>
+    
+    <div class="col-md-3">
+        <div class="card bg-dark feature-card">
+            <div class="card-body text-center">
+                <div class="feature-icon text-primary">
+                    <i class="fas fa-upload"></i>
+                </div>
+                <h4>Step 1: Upload Data</h4>
+                <p>Upload your system call log files to analyze current patterns and performance.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3">
+        <div class="card bg-dark feature-card">
+            <div class="card-body text-center">
+                <div class="feature-icon text-info">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h4>Step 2: Analyze Patterns</h4>
+                <p>Visualize system call patterns, frequencies, and latencies to identify bottlenecks.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3">
+        <div class="card bg-dark feature-card">
+            <div class="card-body text-center">
+                <div class="feature-icon text-success">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h4>Step 3: Apply AI Model</h4>
+                <p>Our AI model predicts optimal system call patterns and suggests improvements.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3">
+        <div class="card bg-dark feature-card">
+            <div class="card-body text-center">
+                <div class="feature-icon text-warning">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h4>Step 4: View Results</h4>
+                <p>Compare before and after performance, and download detailed optimization reports.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-lg-12 text-center">
+        <h3 class="mb-4">Ready to optimize your system calls?</h3>
+        <a href="/data-analysis" class="btn btn-primary btn-lg">Get Started <i class="fas fa-arrow-right ms-2"></i></a>
+    </div>
+</div>
+{% endblock %}

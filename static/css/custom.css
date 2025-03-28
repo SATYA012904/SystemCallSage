@@ -1,0 +1,153 @@
+/* Custom styling to complement the Bootstrap theme */
+
+/* Main container padding */
+.main-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Card styling */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+/* Chart containers */
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin-bottom: 1.5rem;
+}
+
+/* Stat card */
+.stat-card {
+    text-align: center;
+    padding: 1.25rem;
+}
+
+.stat-card .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.stat-card .stat-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* File upload styling */
+.custom-file-button input[type=file] {
+    margin-left: -2px !important;
+}
+
+.custom-file-button input[type=file]::-webkit-file-upload-button {
+    display: none;
+}
+
+.custom-file-button input[type=file]::file-selector-button {
+    display: none;
+}
+
+.custom-file-button label {
+    cursor: pointer;
+}
+
+/* Feature card */
+.feature-card {
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Steps progress */
+.step-progress {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.step-progress::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--bs-dark);
+    z-index: 0;
+}
+
+.step {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem;
+}
+
+.step.active .step-number {
+    background-color: var(--bs-primary);
+}
+
+.step.completed .step-number {
+    background-color: var(--bs-success);
+}
+
+.step-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Results comparison */
+.comparison-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.comparison-label {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.improvement {
+    color: var(--bs-success);
+}
+
+/* Help tooltip */
+.help-icon {
+    color: var(--bs-secondary);
+    cursor: pointer;
+}
+
+/* Footer styling */
+.footer {
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid var(--bs-dark);
+}

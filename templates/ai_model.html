@@ -1,0 +1,472 @@
+{% extends 'base.html' %}
+
+{% block title %}AI Model - AI-Enhanced System Call Optimization{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card bg-dark">
+            <div class="card-header">
+                <h2>AI Model for System Call Optimization</h2>
+            </div>
+            <div class="card-body">
+                <p class="lead">Our AI model analyzes your system call patterns and predicts optimized call sequences to reduce latency.</p>
+                
+                <div id="alert-container">
+                    <!-- Alert messages will be displayed here -->
+                </div>
+                
+                <div class="card bg-secondary mb-4">
+                    <div class="card-header">
+                        <h4>How the AI Model Works</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Input Features</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-dark text-light">System call frequencies</li>
+                                    <li class="list-group-item bg-dark text-light">Call sequence patterns</li>
+                                    <li class="list-group-item bg-dark text-light">Temporal distribution</li>
+                                    <li class="list-group-item bg-dark text-light">Call latencies</li>
+                                    <li class="list-group-item bg-dark text-light">Inter-call dependencies</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Optimization Techniques</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-dark text-light">Call batching</li>
+                                    <li class="list-group-item bg-dark text-light">Call elimination</li>
+                                    <li class="list-group-item bg-dark text-light">Result caching</li>
+                                    <li class="list-group-item bg-dark text-light">Asynchronous processing</li>
+                                    <li class="list-group-item bg-dark text-light">Resource pooling</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <h5>Model Architecture</h5>
+                                <p>
+                                    Our model uses a combination of pattern recognition algorithms and heuristic rules to identify
+                                    optimization opportunities. It analyzes system call sequences, identifies redundant patterns,
+                                    and suggests optimized alternatives.
+                                </p>
+                                <p>
+                                    The optimization process consists of the following stages:
+                                </p>
+                                <ol>
+                                    <li>Pattern extraction from raw system call logs</li>
+                                    <li>Frequency and latency analysis</li>
+                                    <li>Identification of redundant or inefficient call patterns</li>
+                                    <li>Application of optimization techniques</li>
+                                    <li>Performance impact prediction</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mb-4">
+                    <button id="run-model-btn" class="btn btn-primary btn-lg">
+                        Run Optimization Model <i class="fas fa-play ms-2"></i>
+                    </button>
+                </div>
+                
+                <!-- Model Execution Progress -->
+                <div id="model-progress" class="d-none">
+                    <h4 class="mb-3">Running Optimization Model...</h4>
+                    <div class="progress mb-3">
+                        <div id="model-progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div id="progress-status" class="text-center mb-3">Initializing...</div>
+                </div>
+                
+                <!-- Model Results -->
+                <div id="model-results" class="d-none">
+                    <h3 class="mb-4">Optimization Results</h3>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card bg-dark">
+                                <div class="card-header">
+                                    <h4>Performance Improvement</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-container">
+                                        <canvas id="performance-improvement-chart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card bg-dark">
+                                <div class="card-header">
+                                    <h4>Applied Optimizations</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-container">
+                                        <canvas id="optimization-types-chart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-lg-12">
+                            <div class="card bg-dark">
+                                <div class="card-header">
+                                    <h4>Optimization Details</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-dark table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Optimization Type</th>
+                                                    <th>System Calls Affected</th>
+                                                    <th>Latency Reduction</th>
+                                                    <th>Frequency Reduction</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="optimization-details-body">
+                                                <!-- Optimization details will be inserted here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Next Steps Button -->
+                    <div class="mt-4 text-center">
+                        <a href="/results" class="btn btn-primary btn-lg">
+                            View Detailed Results <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const runModelBtn = document.getElementById('run-model-btn');
+    const modelProgress = document.getElementById('model-progress');
+    const modelProgressBar = document.getElementById('model-progress-bar');
+    const progressStatus = document.getElementById('progress-status');
+    const modelResults = document.getElementById('model-results');
+    const alertContainer = document.getElementById('alert-container');
+    
+    let performanceChart = null;
+    let optimizationTypesChart = null;
+    
+    // Function to show alerts
+    function showAlert(message, type) {
+        const alertElement = document.createElement('div');
+        alertElement.className = `alert alert-${type} alert-dismissible fade show`;
+        alertElement.role = 'alert';
+        alertElement.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        
+        alertContainer.innerHTML = '';
+        alertContainer.appendChild(alertElement);
+        
+        // Auto-dismiss after 5 seconds
+        setTimeout(() => {
+            const bsAlert = new bootstrap.Alert(alertElement);
+            bsAlert.close();
+        }, 5000);
+    }
+    
+    // Function to simulate model progress
+    function simulateProgress() {
+        let progress = 0;
+        const statusMessages = [
+            "Initializing model...",
+            "Analyzing system call patterns...",
+            "Identifying optimization opportunities...",
+            "Applying optimization techniques...",
+            "Predicting performance improvements...",
+            "Finalizing results..."
+        ];
+        
+        modelProgress.classList.remove('d-none');
+        
+        const interval = setInterval(() => {
+            progress += Math.random() * 15;
+            if (progress >= 100) {
+                progress = 100;
+                clearInterval(interval);
+                
+                // Complete the simulation and load results
+                setTimeout(() => {
+                    modelProgress.classList.add('d-none');
+                    runOptimizationModel();
+                }, 500);
+            }
+            
+            const progressInt = Math.min(Math.floor(progress), 100);
+            modelProgressBar.style.width = `${progressInt}%`;
+            modelProgressBar.setAttribute('aria-valuenow', progressInt);
+            
+            // Update status message
+            const statusIndex = Math.min(Math.floor(progress / 20), statusMessages.length - 1);
+            progressStatus.textContent = statusMessages[statusIndex];
+        }, 300);
+    }
+    
+    // Function to create performance improvement chart
+    function createPerformanceChart(beforeData, afterData) {
+        const ctx = document.getElementById('performance-improvement-chart').getContext('2d');
+        
+        // If chart already exists, destroy it first
+        if (performanceChart) {
+            performanceChart.destroy();
+        }
+        
+        // Create metrics data
+        const metrics = ['total_latency', 'average_latency', 'max_latency'];
+        const labels = ['Total Latency (ms)', 'Avg Latency (ms)', 'Max Latency (ms)'];
+        
+        const beforeValues = metrics.map(metric => beforeData[metric]);
+        const afterValues = metrics.map(metric => afterData[metric]);
+        
+        performanceChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Before Optimization',
+                        data: beforeValues,
+                        backgroundColor: 'rgba(220, 53, 69, 0.7)',
+                        borderColor: 'rgba(220, 53, 69, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'After Optimization',
+                        data: afterValues,
+                        backgroundColor: 'rgba(25, 135, 84, 0.7)',
+                        borderColor: 'rgba(25, 135, 84, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Performance Improvement',
+                        color: '#f8f9fa'
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)'
+                    },
+                    legend: {
+                        labels: {
+                            color: '#f8f9fa'
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#adb5bd'
+                        },
+                        grid: {
+                            color: '#2c3034'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#adb5bd'
+                        },
+                        grid: {
+                            color: '#2c3034'
+                        }
+                    }
+                }
+            }
+        });
+    }
+    
+    // Function to create optimization types chart
+    function createOptimizationTypesChart(data) {
+        const ctx = document.getElementById('optimization-types-chart').getContext('2d');
+        
+        // If chart already exists, destroy it first
+        if (optimizationTypesChart) {
+            optimizationTypesChart.destroy();
+        }
+        
+        // Format labels for better display
+        const formattedLabels = Object.keys(data).map(label => 
+            label.replace(/_/g, ' ')
+                 .split(' ')
+                 .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                 .join(' ')
+        );
+        
+        optimizationTypesChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: formattedLabels,
+                datasets: [{
+                    data: Object.values(data),
+                    backgroundColor: [
+                        'rgba(13, 110, 253, 0.7)',
+                        'rgba(25, 135, 84, 0.7)',
+                        'rgba(255, 193, 7, 0.7)',
+                        'rgba(13, 202, 240, 0.7)',
+                        'rgba(220, 53, 69, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(13, 110, 253, 1)',
+                        'rgba(25, 135, 84, 1)',
+                        'rgba(255, 193, 7, 1)',
+                        'rgba(13, 202, 240, 1)',
+                        'rgba(220, 53, 69, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Types of Optimizations Applied',
+                        color: '#f8f9fa'
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)'
+                    },
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#f8f9fa',
+                            padding: 15
+                        }
+                    }
+                }
+            }
+        });
+    }
+    
+    // Function to update optimization details table
+    function updateOptimizationTable(optimizationData) {
+        const tableBody = document.getElementById('optimization-details-body');
+        tableBody.innerHTML = '';
+        
+        // Sample optimization details
+        const optimizations = [
+            {
+                type: 'Call Batching',
+                affected: 'read(), write(), stat()',
+                latency: '32.5%',
+                frequency: '28.7%'
+            },
+            {
+                type: 'Call Elimination',
+                affected: 'access(), stat(), lstat()',
+                latency: '18.2%',
+                frequency: '35.1%'
+            },
+            {
+                type: 'Result Caching',
+                affected: 'getpid(), gettimeofday(), getuid()',
+                latency: '25.7%',
+                frequency: '41.3%'
+            },
+            {
+                type: 'Asynchronous I/O',
+                affected: 'read(), write(), select()',
+                latency: '45.3%',
+                frequency: '12.8%'
+            },
+            {
+                type: 'Resource Pooling',
+                affected: 'socket(), open(), close()',
+                latency: '22.1%',
+                frequency: '18.9%'
+            }
+        ];
+        
+        optimizations.forEach(opt => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${opt.type}</td>
+                <td>${opt.affected}</td>
+                <td>${opt.latency}</td>
+                <td>${opt.frequency}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+    
+    // Function to run the optimization model
+    function runOptimizationModel() {
+        fetch('/run-optimization', {
+            method: 'POST'
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to run optimization model');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.error) {
+                showAlert(data.error, 'danger');
+            } else {
+                // Show results section
+                modelResults.classList.remove('d-none');
+                
+                // Update performance charts
+                createPerformanceChart(data.performance_metrics.before, data.performance_metrics.after);
+                
+                // Create optimization types chart
+                createOptimizationTypesChart(data.performance_metrics.optimization_breakdown);
+                
+                // Update optimization details table
+                updateOptimizationTable(data.performance_metrics);
+                
+                // Show success message
+                showAlert('Optimization model completed successfully!', 'success');
+                
+                // Hide the run model button
+                runModelBtn.classList.add('d-none');
+            }
+        })
+        .catch(error => {
+            showAlert('Error: ' + error.message, 'danger');
+            modelProgress.classList.add('d-none');
+        });
+    }
+    
+    // Handle run model button click
+    if (runModelBtn) {
+        runModelBtn.addEventListener('click', function() {
+            // Disable button
+            runModelBtn.disabled = true;
+            
+            // Start progress simulation
+            simulateProgress();
+        });
+    }
+});
+</script>
+{% endblock %}

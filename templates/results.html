@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+
+{% block title %}Results - AI-Enhanced System Call Optimization{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card bg-dark">
+            <div class="card-header">
+                <h2>Optimization Results</h2>
+            </div>
+            <div class="card-body">
+                <p class="lead">Review the optimized system call patterns and performance improvements.</p>
+                
+                <div id="alert-container">
+                    <!-- Alert messages will be displayed here -->
+                </div>
+                
+                <!-- Performance Metrics Summary -->
+                <div id="performance-metrics" class="mb-4">
+                    <h3 class="mb-3">Performance Improvement Summary</h3>
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card bg-dark">
+                                <div class="card-header text-center">
+                                    <h5>Total Latency</h5>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="comparison-label">Before</div>
+                                            <div class="comparison-value" id="total-latency-before">0 ms</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="comparison-label">After</div>
+                                            <div class="comparison-value" id="total-latency-after">0 ms</div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="improvement" id="latency-improvement">0%</div>
+                                        <div class="small">Improvement</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="card bg-dark">
+                                <div class="card-header text-center">
+                                    <h5>Average Latency</h5>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="comparison-label">Before</div>
+                                            <div class="comparison-value" id="avg-latency-before">0 ms</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="comparison-label">After</div>
+                                            <div class="comparison-value" id="avg-latency-after">0 ms</div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="improvement" id="avg-improvement">0 ms</div>
+                                        <div class="small">Reduction</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="card bg-dark">
+                                <div class="card-header text-center">
+                                    <h5>System Call Count</h5>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="comparison-label">Before</div>
+                                            <div class="comparison-value" id="total-calls-before">0</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="comparison-label">After</div>
+                                            <div class="comparison-value" id="total-calls-after">0</div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="improvement" id="calls-reduced">0</div>
+                                        <div class="small">Calls Reduced</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Visualization Charts -->
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card bg-dark">
+                            <div class="card-header">
+                                <h4>Performance Comparison</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container">
+                                    <canvas id="performance-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card bg-dark">
+                            <div class="card-header">
+                                <h4>Optimization Breakdown</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container">
+                                    <canvas id="optimization-breakdown-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Optimization Details -->
+                <div id="optimization-details" class="mt-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card bg-dark">
+                                <div class="card-header">
+                                    <h4>Optimization Techniques</h4>
+                                </div>
+                                <div class="card-body">
+                                    <ul id="optimization-techniques" class="list-group">
+                                        <!-- Optimization techniques will be inserted here -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card bg-dark">
+                                <div class="card-header">
+                                    <h4>Top Optimized Calls</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-dark table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Optimization</th>
+                                                    <th>Calls Affected</th>
+                                                    <th>% of Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="optimized-calls-body">
+                                                <!-- Optimized calls data will be inserted here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Report Generation -->
+                <div class="card bg-secondary mt-4">
+                    <div class="card-body text-center">
+                        <h4 class="mb-3">Generate Performance Report</h4>
+                        <p>Download a comprehensive report with detailed optimization analysis and recommendations.</p>
+                        <button id="generate-report-btn" class="btn btn-primary btn-lg">
+                            <i class="fas fa-file-download me-2"></i> Generate Report
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Reset Button -->
+                <div class="text-center mt-4">
+                    <button id="reset-btn" class="btn btn-outline-danger">
+                        <i class="fas fa-redo me-2"></i> Reset and Start Over
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/results.js') }}"></script>
+{% endblock %}
