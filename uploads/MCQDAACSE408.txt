@@ -1,0 +1,1483 @@
+ 
+
+1.What is the best-case time complexity of Quick Sort?**  
+   a) O(n²)  
+   b) O(n log n)  
+   c) O(n)  
+   d) O(log n) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** b) O(n log n)  
+
+2. **Binary Search requires the input array to be:**  
+   a) Sorted  
+   b) Unsorted  
+   c) In reverse order  
+   d) None of the above 
+
+
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** a) Sorted  
+
+3. **Which sorting algorithm works by repeatedly swapping adjacent elements if they are in the wrong order?**  
+   a) Merge Sort  
+   b) Quick Sort  
+   c) Bubble Sort  
+   d) Radix Sort  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   **Answer:** c) Bubble Sort  
+
+4. **In Heapsort, which data structure is used to implement the algorithm?**  
+   a) Stack  
+   b) Queue  
+   c) Heap  
+   d) Graph 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** c) Heap  
+
+5. **Which algorithm is used for finding the shortest path in an unweighted graph?**  
+   a) Dijkstra’s Algorithm  
+   b) Prim’s Algorithm  
+   c) Breadth-First Search (BFS)  
+   d) Depth-First Search (DFS)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   **Answer:** c) Breadth-First Search (BFS)  
+
+---
+
+### **Intermediate Level MCQs**  
+
+6. **Which of the following algorithms follows the Decrease and Conquer approach?**  
+   a) Merge Sort  
+   b) Quick Sort  
+   c) Insertion Sort  
+   d) Strassen’s Matrix Multiplication
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   **Answer:** c) Insertion Sort  
+
+7. **What is the worst-case time complexity of Counting Sort?**  
+   a) O(n²)  
+   b) O(n)  
+   c) O(n log n)  
+   d) O(n + k)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+   **Answer:** d) O(n + k)  
+
+8. **Which of the following is a non-comparison sorting algorithm?**  
+   a) Quick Sort  
+   b) Merge Sort  
+   c) Heap Sort  
+   d) Radix Sort  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   **Answer:** d) Radix Sort  
+
+9. **The Master Method applies to recurrences of the form:**  
+   a) T(n) = aT(n/b) + f(n)  
+   b) T(n) = T(n-1) + f(n)  
+   c) T(n) = T(n/2) + O(n)  
+   d) T(n) = O(n log n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   **Answer:** a) T(n) = aT(n/b) + f(n)  
+
+10. **What is the time complexity of finding the convex hull using the Divide and Conquer method?**  
+   a) O(n²)  
+   b) O(n log n)  
+   c) O(n)  
+   d) O(log n)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   **Answer:** b) O(n log n)  
+
+---
+
+### **Advanced Level MCQs**  
+
+11. **Which sorting algorithm is stable and works in O(n log n) time?**  
+   a) Quick Sort  
+   b) Merge Sort  
+   c) Heap Sort  
+   d) Selection Sort 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** b) Merge Sort  
+
+12. **What is the space complexity of Merge Sort?**  
+   a) O(1)  
+   b) O(log n)  
+   c) O(n)  
+   d) O(n²)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   **Answer:** c) O(n)  
+
+13. **Which data structure is used in Topological Sorting?**  
+   a) Stack  
+   b) Queue  
+   c) Heap  
+   d) Linked List 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** a) Stack  
+
+14. **Which of the following techniques is used in Strassen’s Algorithm?**  
+   a) Divide and Conquer  
+   b) Greedy Algorithm  
+   c) Dynamic Programming  
+   d) Backtracking  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   **Answer:** a) Divide and Conquer  
+
+15. **Which algorithm is best for finding the k-th smallest element in an unsorted array?**  
+   a) Quick Sort  
+   b) Merge Sort  
+   c) QuickSelect Algorithm  
+   d) Bubble Sort  
+
+
+
+
+
+
+
+
+   **Answer:** c) QuickSelect Algorithm  
+
+16. **Which of the following sorting algorithms has the worst case as O(n log n)?**  
+   a) Heap Sort  
+   b) Merge Sort  
+   c) Quick Sort  
+   d) Both a and b  
+
+
+
+
+
+
+
+   **Answer:** d) Both a and b  
+
+17. **What is the time complexity of Heap Sort in the worst case?**  
+   a) O(n log n)  
+   b) O(n²)  
+   c) O(n)  
+   d) O(log n) 
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** a) O(n log n)  
+
+18. **Which of the following is NOT an advantage of hashing?**  
+   a) Fast search operations  
+   b) Efficient storage  
+   c) Always requires O(1) time for search  
+   d) Possible hash collisions
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   **Answer:** d) Possible hash collisions  
+
+19. **Which algorithm is used to find the connected components in a graph?**  
+   a) Depth-First Search  
+   b) Breadth-First Search  
+   c) Kruskal’s Algorithm  
+   d) Both a and b  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   **Answer:** d) Both a and b  
+
+20. **Which of the following sorting algorithms is not in-place?**  
+   a) Quick Sort  
+   b) Merge Sort  
+   c) Heap Sort  
+   d) Selection Sort 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** b) Merge Sort  
+
+Here are 30 multiple-choice questions (MCQs) on **Foundations of Algorithm** with answers, ranging from high to low difficulty.  
+  
+
+1. **Which of the following problems is undecidable?**  
+   a) 3-SAT  
+   b) Traveling Salesman Problem  
+   c) Halting Problem  
+   d) Longest Common Subsequence 
+
+
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** c) Halting Problem  
+
+2. **If an algorithm has time complexity O(2^n), which of the following statements is true?**  
+   a) It is a polynomial-time algorithm.  
+   b) It is an exponential-time algorithm.  
+   c) It has constant time complexity.  
+   d) It is a logarithmic-time algorithm. 
+
+
+
+
+
+
+
+
+ 
+   **Answer:** b) It is an exponential-time algorithm.  
+
+3. **Which data structure is used in the implementation of recursion?**  
+   a) Queue  
+   b) Stack  
+   c) Heap  
+   d) Graph  
+
+
+
+
+
+
+
+
+
+
+
+
+
+   **Answer:** b) Stack  
+
+4. **Which sorting algorithm has an average-case time complexity of O(n log n) and is not in-place?**  
+   a) Quick Sort  
+   b) Merge Sort  
+   c) Heap Sort  
+   d) Bubble Sort 
+
+
+
+
+
+
+
+
+ 
+   **Answer:** b) Merge Sort  
+
+5. **The Master Theorem is used for solving recurrence relations of the form:**  
+   a) T(n) = aT(n/b) + O(n^c)  
+   b) T(n) = T(n-1) + O(n)  
+   c) T(n) = T(n/2) + O(log n)  
+   d) T(n) = O(1) 
+
+
+
+
+
+
+
+
+ 
+   **Answer:** a) T(n) = aT(n/b) + O(n^c)  
+
+6. **Which of the following best describes an NP-complete problem?**  
+   a) Can be solved in polynomial time.  
+   b) Can be reduced to an NP problem in polynomial time.  
+   c) Can be solved in exponential time only.  
+   d) Cannot be solved by any algorithm.
+
+
+
+
+
+
+
+
+
+
+  
+   **Answer:** b) Can be reduced to an NP problem in polynomial time.  
+
+7. **Which algorithm design paradigm is used in Floyd-Warshall Algorithm for finding shortest paths in a graph?**  
+   a) Divide and Conquer  
+   b) Dynamic Programming  
+   c) Greedy Algorithm  
+   d) Brute Force 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** b) Dynamic Programming  
+
+8. **Which of the following is NOT a property of a good hash function?**  
+   a) Uniform distribution of hash values  
+   b) Low probability of collision  
+   c) Produces different outputs for the same input  
+   d) Fast computation 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** c) Produces different outputs for the same input  
+
+9. **What is the worst-case time complexity of the QuickSort algorithm?**  
+   a) O(n log n)  
+   b) O(n^2)  
+   c) O(n)  
+   d) O(log n)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   **Answer:** b) O(n^2)  
+
+10. **Which of the following is the most efficient searching algorithm in an unordered array?**  
+    a) Binary Search  
+    b) Linear Search  
+    c) Jump Search  
+    d) Interpolation Search 
+
+
+
+
+
+
+
+
+
+ 
+    **Answer:** b) Linear Search  
+
+---
+
+### **Medium-Level Questions (Intermediate)**  
+
+11. **Which of the following is NOT a Linear Data Structure?**  
+    a) Stack  
+    b) Queue  
+    c) Graph  
+    d) Linked List 
+
+
+
+
+
+
+
+
+
+ 
+    **Answer:** c) Graph  
+
+12. **What is the time complexity of inserting an element in a Binary Search Tree (BST) on average?**  
+    a) O(1)  
+    b) O(log n)  
+    c) O(n)  
+    d) O(n log n)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    **Answer:** b) O(log n)  
+
+13. **Which algorithm is used to find the shortest path in an unweighted graph?**  
+    a) Floyd-Warshall Algorithm  
+    b) Bellman-Ford Algorithm  
+    c) Dijkstra's Algorithm  
+    d) Breadth-First Search 
+
+
+
+
+
+
+
+
+ 
+    **Answer:** d) Breadth-First Search  
+
+14. **Which sorting algorithm is best suited for small datasets?**  
+    a) Merge Sort  
+    b) Quick Sort  
+    c) Bubble Sort  
+    d) Selection Sort  
+
+
+
+
+
+
+
+
+
+    **Answer:** c) Bubble Sort  
+
+15. **Which notation describes the best case of an algorithm?**  
+    a) O(Big-Oh)  
+    b) Ω(Big-Omega)  
+    c) θ(Big-Theta)  
+    d) φ(Greek letter Phi) 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    **Answer:** b) Ω(Big-Omega)  
+
+16. **What is the recurrence relation for Merge Sort?**  
+    a) T(n) = T(n-1) + O(n)  
+    b) T(n) = 2T(n/2) + O(n)  
+    c) T(n) = T(n-1) + O(1)  
+    d) T(n) = T(n/2) + O(log n) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    **Answer:** b) T(n) = 2T(n/2) + O(n)  
+
+17. **Which of the following data structures is best suited for implementing LRU (Least Recently Used) Cache?**  
+    a) Array  
+    b) Queue  
+    c) Linked List + HashMap  
+    d) Stack 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    **Answer:** c) Linked List + HashMap  
+
+18. **Which algorithm is used for finding strongly connected components (SCC) in a directed graph?**  
+    a) Kruskal’s Algorithm  
+    b) Floyd-Warshall Algorithm  
+    c) Kosaraju’s Algorithm  
+    d) Prim’s Algorithm
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    **Answer:** c) Kosaraju’s Algorithm  
+
+19. **Which data structure is primarily used in Prim’s Algorithm for finding MST?**  
+    a) Stack  
+    b) Queue  
+    c) Priority Queue (Min-Heap)  
+    d) Hash Table  
+
+
+
+
+
+
+
+
+
+    **Answer:** c) Priority Queue (Min-Heap)  
+
+20. **Which sorting algorithm is considered "stable"?**  
+    a) QuickSort  
+    b) MergeSort  
+    c) HeapSort  
+    d) SelectionSort  
+    **Answer:** b) MergeSort  
+
+---
+
+### **Low-Level Questions (Basic)**  
+
+21. **What is the time complexity of accessing an element in an array?**  
+    a) O(n)  
+    b) O(log n)  
+    c) O(1)  
+    d) O(n log n)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    **Answer:** c) O(1)  
+
+22. **Which data structure follows First-In-First-Out (FIFO) order?**  
+    a) Stack  
+    b) Queue  
+    c) Graph  
+    d) Linked List 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    **Answer:** b) Queue  
+
+23. **Which of the following is a non-linear data structure?**  
+    a) Array  
+    b) Stack  
+    c) Queue  
+    d) Tree  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    **Answer:** d) Tree  
+
+24. **What is the worst-case complexity of Linear Search?**  
+    a) O(1)  
+    b) O(n)  
+    c) O(log n)  
+    d) O(n log n) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    **Answer:** b) O(n)  
+
+25. **What is the best-case complexity of Binary Search?**  
+    a) O(n)  
+    b) O(log n)  
+    c) O(1)  
+    d) O(n^2) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    **Answer:** c) O(1)  
+
+26. **Which algorithm is used for finding the shortest path from a source to all vertices in a weighted graph?**  
+    a) Kruskal’s Algorithm  
+    b) Prim’s Algorithm  
+    c) Dijkstra’s Algorithm  
+    d) Floyd-Warshall Algorithm 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    **Answer:** c) Dijkstra’s Algorithm  
+
+27. **Which of the following operations has O(1) time complexity in a hash table?**  
+    a) Insertion  
+    b) Searching  
+    c) Deletion  
+    d) All of the above  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    **Answer:** d) All of the above  
+
+
+ 
+
+1. **Which of the following string matching algorithms uses finite automata to improve efficiency?**  
+   a) Rabin-Karp Algorithm  
+   b) Naïve String Matching Algorithm  
+   c) Knuth-Morris-Pratt Algorithm  
+   d) Boyer-Moore Algorithm 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** c) Knuth-Morris-Pratt Algorithm  
+
+2. **The Rabin-Karp algorithm uses which technique for pattern searching?**  
+   a) Finite Automaton  
+   b) Hashing  
+   c) Dynamic Programming  
+   d) Exhaustive Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   **Answer:** b) Hashing  
+
+3. **What is the worst-case time complexity of the Naïve String Matching algorithm for a text of length n and pattern of length m?**  
+   a) O(n)  
+   b) O(n + m)  
+   c) O(nm)  
+   d) O(n log m)  
+
+
+
+
+
+
+
+
+
+
+
+
+   **Answer:** c) O(nm)  
+
+4. **Which geometric algorithm finds the smallest enclosing circle for a given set of points?**  
+   a) Graham's Scan  
+   b) Welzl’s Algorithm  
+   c) Gift Wrapping Algorithm  
+   d) Jarvis March 
+
+
+
+
+
+
+
+
+ 
+   **Answer:** b) Welzl’s Algorithm  
+
+5. **What is the main advantage of the Boyer-Moore algorithm over the Knuth-Morris-Pratt algorithm?**  
+   a) It preprocesses the pattern faster.  
+   b) It can skip multiple characters in the text.  
+   c) It does not require preprocessing.  
+   d) It uses hashing for searching.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   **Answer:** b) It can skip multiple characters in the text.  
+
+6. **Which algorithm efficiently finds the closest pair of points in 2D space?**  
+   a) Graham’s Scan  
+   b) Divide and Conquer Closest-Pair Algorithm  
+   c) Voronoi Diagram Construction  
+   d) Brute-Force Closest-Pair Algorithm  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   **Answer:** b) Divide and Conquer Closest-Pair Algorithm  
+
+7. **Which data structure is commonly used in the implementation of Voronoi diagrams?**  
+   a) Quad Tree  
+   b) KD-Tree  
+   c) Delaunay Triangulation  
+   d) Binary Search Tree 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** c) Delaunay Triangulation  
+
+8. **What is the best-case time complexity of the Rabin-Karp algorithm when no spurious hits occur?**  
+   a) O(n)  
+   b) O(n + m)  
+   c) O(nm)  
+   d) O(m) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** a) O(n)  
+
+9. **Which of the following sorting methods is NOT used for convex hull construction?**  
+   a) Merge Sort  
+   b) Quick Sort  
+   c) Radix Sort  
+   d) Bucket Sort 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   **Answer:** d) Bucket Sort  
+
+10. **The Knuth-Morris-Pratt algorithm preprocesses the pattern to compute which of the following?**  
+    a) Prefix Function  
+    b) Suffix Array  
+    c) Hash Table  
+    d) Trie 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    **Answer:** a) Prefix Function  
+
+---
+
+### **Medium-Level Questions (Intermediate)**  
+
+11. **Which string-matching algorithm is based on rolling hash?**  
+    a) Boyer-Moore Algorithm  
+    b) Knuth-Morris-Pratt Algorithm  
+    c) Rabin-Karp Algorithm  
+    d) Finite Automaton Algorithm  
+    **Answer:** c) Rabin-Karp Algorithm  
+
+12. **Which convex hull algorithm sorts points first and then constructs the hull?**  
+    a) Graham’s Scan  
+    b) QuickHull  
+    c) Gift Wrapping  
+    d) Divide and Conquer  
+    **Answer:** a) Graham’s Scan  
+
+13. **Which algorithm has an average-case complexity of O(n log n) for finding the convex hull?**  
+    a) Gift Wrapping  
+    b) Graham’s Scan  
+    c) Brute Force  
+    d) Voronoi Diagram  
+    **Answer:** b) Graham’s Scan  
+
+14. **In the Boyer-Moore algorithm, what are the two main heuristics used for skipping characters?**  
+    a) Prefix Function and Hashing  
+    b) Bad Character Heuristic and Good Suffix Heuristic  
+    c) Trie Matching and Rabin-Karp Hashing  
+    d) Exhaustive Search and Divide & Conquer  
+    **Answer:** b) Bad Character Heuristic and Good Suffix Heuristic  
+
+15. **What is the time complexity of the Divide and Conquer approach to solving the closest-pair problem in 2D space?**  
+    a) O(n log n)  
+    b) O(n²)  
+    c) O(n)  
+    d) O(log n)  
+    **Answer:** a) O(n log n)  
+
+16. **Which method is used to compute Voronoi diagrams?**  
+    a) Dijkstra’s Algorithm  
+    b) Divide and Conquer Algorithm  
+    c) Dynamic Programming  
+    d) Hashing  
+    **Answer:** b) Divide and Conquer Algorithm  
+
+17. **What is the primary purpose of Delaunay Triangulation?**  
+    a) To construct convex hulls  
+    b) To optimize nearest-neighbor search  
+    c) To improve hashing functions  
+    d) To perform exhaustive search  
+    **Answer:** b) To optimize nearest-neighbor search  
+
+18. **Which of the following is NOT a string-matching algorithm?**  
+    a) Rabin-Karp Algorithm  
+    b) Floyd-Warshall Algorithm  
+    c) Knuth-Morris-Pratt Algorithm  
+    d) Naïve String-Matching Algorithm  
+    **Answer:** b) Floyd-Warshall Algorithm  
+
+19. **Which convex hull algorithm is based on recursive divide and merge?**  
+    a) Graham’s Scan  
+    b) QuickHull  
+    c) Gift Wrapping  
+    d) Divide and Conquer  
+    **Answer:** d) Divide and Conquer  
+
+20. **What is the worst-case time complexity of the Boyer-Moore algorithm?**  
+    a) O(n)  
+    b) O(m + n)  
+    c) O(nm)  
+    d) O(n²)  
+    **Answer:** c) O(nm)  
+
+---
+
+### **Low-Level Questions (Basic)**  
+
+21. **What is the worst-case complexity of the brute-force string-matching algorithm?**  
+    a) O(n)  
+    b) O(nm)  
+    c) O(log n)  
+    d) O(1)  
+    **Answer:** b) O(nm)  
+
+22. **Which algorithm preprocesses the pattern to allow skipping multiple text characters?**  
+    a) Naïve String Matching  
+    b) Rabin-Karp Algorithm  
+    c) Knuth-Morris-Pratt Algorithm  
+    d) Boyer-Moore Algorithm  
+    **Answer:** d) Boyer-Moore Algorithm  
+
+23. **Which of the following is NOT used in computational geometry?**  
+    a) Convex Hull  
+    b) Voronoi Diagrams  
+    c) Huffman Coding  
+    d) Closest-Pair Algorithm  
+    **Answer:** c) Huffman Coding  
+
+24. **What is the time complexity of finding a convex hull using the Gift Wrapping algorithm?**  
+    a) O(n log n)  
+    b) O(n²)  
+    c) O(n)  
+    d) O(log n)  
+    **Answer:** b) O(n²)  
+
+25. **Which algorithm is best for detecting if a point is inside a convex polygon?**  
+    a) Convex Hull  
+    b) Graham’s Scan  
+    c) Point-in-Polygon Test  
+    d) Rabin-Karp Algorithm  
+    **Answer:** c) Point-in-Polygon Test  
+

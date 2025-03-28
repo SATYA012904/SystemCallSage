@@ -1,0 +1,58 @@
+//user defined exception
+
+
+
+set serveroutput on;  
+   declare
+   balance integer:=24;
+    begin
+    if balance<=100 then
+    RAISE_APPLICATION_ERROR(-20343,'The balance is too low');
+    end if;
+    end;
+    /
+
+ raise_application_error is actually a procedure defined by Oracle that allows the developer to raise an exception and associate an error number and message with the procedure. This allows the application to raise application errors rather than just Oracle errors.
+The error_number is a negative integer with the range from -20999 to -20000.
+
+//user defined exception
+
+set serveroutput on;
+
+declare 
+var_dividend NUMBER:=24;
+var_divisor NUMBER:=0;
+var_result NUMBER;
+ex_Divzero EXCEPTION;
+BEGIN
+IF var_divisor=0 THEN
+RAISE ex_Divzero;
+end if;
+var_result:=var_dividend/var_divisor;
+DBMS_OUTPUT.PUT_LINE('Result='||var_result);
+EXCEPTION WHEN ex_Divzero then
+DBMS_OUTPUT.PUT_LINE('error error!-your divisor is zero' );
+end;
+/
+SET SERVEROUTPUT ON;
+Declare
+age number:=19;
+begin
+if age<18 then
+raise_application_error(-20008,'you should be 18 or above the drinks');
+end if;
+DBMS_OUTPUT.PUT_LINE('sure!-what  would you like to have?' );
+EXCEPTION WHEN others then
+DBMS_OUTPUT.PUT_LINE(SQLERRM);
+end;
+/
+
+
+
+You can use the %TYPE attribute as a datatype specifier when declaring constants, variables, fields, and parameters. If the types that you reference change, your declarations are automatically updated. This technique saves you from making code changes when, for example, the length of a VARCHAR2 column is increased.
+
+
+
+
+
+
